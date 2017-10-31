@@ -1,0 +1,11 @@
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\FizzBuzz.deps.json
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\FizzBuzz.runtimeconfig.json
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\FizzBuzz.runtimeconfig.dev.json
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\FizzBuzz.dll
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\FizzBuzz.pdb
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.csprojResolveAssemblyReference.cache
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.AssemblyInfoInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.AssemblyInfo.cs
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.dll
+C:\Users\veslan\Source\Repos\C-Sharp\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\FizzBuzz.pdb
