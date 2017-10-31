@@ -1,0 +1,11 @@
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\bin\Debug\netcoreapp2.0\checkDuplicates.deps.json
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\bin\Debug\netcoreapp2.0\checkDuplicates.runtimeconfig.json
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\bin\Debug\netcoreapp2.0\checkDuplicates.runtimeconfig.dev.json
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\bin\Debug\netcoreapp2.0\checkDuplicates.dll
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\bin\Debug\netcoreapp2.0\checkDuplicates.pdb
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.csprojResolveAssemblyReference.cache
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.csproj.CoreCompileInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.AssemblyInfoInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.AssemblyInfo.cs
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.dll
+C:\Users\veslan\Source\Repos\C-Sharp\checkDuplicates\checkDuplicates\obj\Debug\netcoreapp2.0\checkDuplicates.pdb

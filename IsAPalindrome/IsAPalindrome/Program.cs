@@ -19,7 +19,7 @@ namespace IsAPalindrome
                 }
                 return isPal;
             }
-            Console.WriteLine(IsItAPalindrome("caleb"));
+            Console.WriteLine(IsItAPalindrome("hannah"));
         }
     }
 }
