@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ConsoleApp1"
+    "\\IsAPalindrome",
+    "\\IsAPalindrome\\IsAPalindrome"
   ],
-  "SelectedNode": "\\ConsoleApp1",
+  "SelectedNode": "\\IsAPalindrome\\IsAPalindrome\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

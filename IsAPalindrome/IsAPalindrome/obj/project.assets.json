@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\veslan\\source\\repos\\C-Sharp\\FizzBuzz\\FizzBuzz\\FizzBuzz.csproj",
-      "projectName": "FizzBuzz",
-      "projectPath": "C:\\Users\\veslan\\source\\repos\\C-Sharp\\FizzBuzz\\FizzBuzz\\FizzBuzz.csproj",
+      "projectUniqueName": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
+      "projectName": "IsAPalindrome",
+      "projectPath": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
       "packagesPath": "C:\\Users\\veslan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\veslan\\source\\repos\\C-Sharp\\FizzBuzz\\FizzBuzz\\obj\\",
+      "outputPath": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

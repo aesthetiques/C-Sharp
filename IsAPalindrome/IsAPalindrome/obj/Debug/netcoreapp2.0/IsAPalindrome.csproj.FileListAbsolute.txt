@@ -1,0 +1,11 @@
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.csprojResolveAssemblyReference.cache
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.csproj.CoreCompileInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.AssemblyInfoInputs.cache
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.AssemblyInfo.cs
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\bin\Debug\netcoreapp2.0\IsAPalindrome.deps.json
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\bin\Debug\netcoreapp2.0\IsAPalindrome.runtimeconfig.json
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\bin\Debug\netcoreapp2.0\IsAPalindrome.runtimeconfig.dev.json
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\bin\Debug\netcoreapp2.0\IsAPalindrome.dll
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\bin\Debug\netcoreapp2.0\IsAPalindrome.pdb
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.dll
+C:\Users\veslan\Source\Repos\C-Sharp\IsAPalindrome\IsAPalindrome\obj\Debug\netcoreapp2.0\IsAPalindrome.pdb
