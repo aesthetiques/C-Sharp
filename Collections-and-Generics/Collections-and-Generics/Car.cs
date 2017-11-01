@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace CollectionsAndGenerics
 {
-    class Car
+    public class Car
     {
         public Color CarColor { get; set; }
     }
 
-    enum Color
+    public enum Color
     {
         Slate,
         Mauve,

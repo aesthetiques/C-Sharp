@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static System.Collections.IEnumerable;
 
 namespace CollectionsAndGenerics
 {
@@ -62,7 +63,29 @@ namespace CollectionsAndGenerics
                 Console.WriteLine($"And then there was one. {name}.");
             }
 
+            Car lamborghini = new Car();
+            lamborghini.CarColor = Color.FireRed;
+            Car corvette = new Car();
+            corvette.CarColor = Color.Plum;
+            Car rangeRover = new Car();
+            rangeRover.CarColor = Color.Mahogany;
 
+            List<Car> carList = new List<Car> { lamborghini, corvette, rangeRover };
+
+            Garage<Car> pacificPlaceGarage = new Garage<Car>();
+
+            pacificPlaceGarage.Add(lamborghini);
+            pacificPlaceGarage.Add(corvette);
+            pacificPlaceGarage.Add(new Car { CarColor = Color.Plum });
+
+            /*Enumerable means it can be iterated through.
+             */
+            foreach(Car vehicle in pacificPlaceGarage)
+            {
+                Console.WriteLine(vehicle.CarColor);
+            }
+
+            Console.WriteLine(pacificPlaceGarage);
         }
     }
 }
