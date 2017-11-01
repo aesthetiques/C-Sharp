@@ -44,15 +44,25 @@ namespace CollectionsAndGenerics
 
             /*Collection Initializers
              *Instead of running through list.Add(); a million times you can do: 
-             * when initi
+             * when initialing a list, pass in the values [similar to array instantiation in JS]
              */
             List<string> initializedList = new List<string> { "caleb", "allie", "kyle" };
             
+            initializedList.Remove("kyle");
+
             foreach(string name in initializedList)
             {
                 Console.WriteLine(name);
             }
-             
+
+            initializedList.RemoveAt(initializedList.IndexOf("allie"));
+
+            foreach (string name in initializedList)
+            {
+                Console.WriteLine($"And then there was one. {name}.");
+            }
+
+
         }
     }
 }
