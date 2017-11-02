@@ -6,8 +6,32 @@ namespace ProductCatalogue
 {
     public class Product
     {
-        public string name { get; set; }
-        public string description { get; set; }
+        private string name;
+        private string description;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                description = value;
+            }
+        }
+
+
 
         public Product(string productName, string productDescription)
         {

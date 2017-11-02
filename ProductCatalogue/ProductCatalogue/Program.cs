@@ -12,12 +12,15 @@ namespace ProductCatalogue
             techCatalogue.Add(new Product("Dell XPS 15 2017", "15in Ultrabook, near bezelless display, Windows 10"));
             techCatalogue.Add(new Product("Nvidia 980ti", "Next generation gaming GPU"));
 
+            Product newProduct = new Product("name", "dscriptouahsdouahsd");
+            newProduct.Description = "this is a thing";
+
+            Console.WriteLine(newProduct.Description);
+
             foreach(Product product in techCatalogue)
             {
-                Console.WriteLine($"{product.name} {product.description}");
+                Console.WriteLine($"{product.Name} {product.Description}");
             }
-
-
 
         }
     }
