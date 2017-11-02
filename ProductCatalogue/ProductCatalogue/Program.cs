@@ -22,6 +22,8 @@ namespace ProductCatalogue
                 Console.WriteLine($"{product.Name} {product.Description}");
             }
 
+            
+
         }
     }
 }
