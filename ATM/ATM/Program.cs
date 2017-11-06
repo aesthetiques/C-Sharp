@@ -40,17 +40,17 @@ namespace ATM
             return newBalance;
         }
 
-        static public void InputHandler()
+        static public void InputHandler(decimal balance = 5280.00M)
         {
             int transactionType = ChooseTransaction();
 
-            decimal balance = 5280.00M;
+           // decimal balance = 5280.00M;
 
             switch (transactionType)
             {
                 case 1:
                     ViewBalance(balance);
-                    InputHandler();
+                    InputHandler(balance);
                     break;
                 case 2:
                     decimal newBalance = Withdraw(balance);
@@ -63,12 +63,12 @@ namespace ATM
                         balance = newBalance;
                         Console.WriteLine($"Your current balance is: {newBalance}");
                     }
-                    InputHandler();
+                    InputHandler(balance);
                     break;
                 case 3:
                     balance = Deposit(balance);
                     Console.WriteLine($"Your current balance is: {balance}");
-                    InputHandler();
+                    InputHandler(balance);
                     break;
                 case 4:
                     Console.WriteLine("Thank you for banking with Bank Fellows. Have a great day!");
