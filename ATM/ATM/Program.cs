@@ -6,8 +6,7 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter your pin.");
-            InputHander();
+            InputHandler();
         }
 
         static public int ChooseTransaction()
@@ -16,23 +15,23 @@ namespace ATM
             Console.WriteLine("1. View Balance");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Deposit");
-
-            return Convert.ToInt32(Console.ReadLine()); ;
-        }
-
-        public void ViewBalance(decimal balance)
-        {
-            Console.WriteLine($"Your current balance is: {balance}");
-        }
-
-        public int Withdraw()
-        {
-            Console.WriteLine("How much would you like to withdraw? Please enter a multiple of 20.");
+            Console.WriteLine("4. End transaction.");
 
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        public decimal Deposit(decimal balance)
+        static public void ViewBalance(decimal balance)
+        {
+            Console.WriteLine($"Your current balance is: {balance}");
+        }
+
+        static public decimal Withdraw(decimal balance)
+        {
+            Console.WriteLine("How much would you like to withdraw? Please enter a multiple of 20.");
+            return balance - Convert.ToDecimal(Console.ReadLine());
+        }
+
+        static public decimal Deposit(decimal balance)
         {
             Console.WriteLine("Please enter amount of deposit:");
 
@@ -41,39 +40,44 @@ namespace ATM
             return newBalance;
         }
 
-        public void InputHandler()
+        static public void InputHandler()
         {
+            int transactionType = ChooseTransaction();
 
             decimal balance = 5280.00M;
 
-            int transactionType = ChooseTransaction();
-
-            if(transactionType == 1)
+            switch (transactionType)
             {
-                ViewBalance(balance);
-            }
-
-            if(transactionType == 2)
-            {
-                int input = Withdraw();
-                if(input > balance)
-                {
-                    Console.WriteLine($"Insufficient funds for this transaction.");
-                }
-                else
-                {
-                    decimal newBalance = (balance - input);
-                    balance = newBalance;
-                    Console.WriteLine($"Your current balance is: {newBalance}");
-                }
-            }
-
-            if(transactionType == 3)
-            {
-                Deposit();
+                case 1:
+                    ViewBalance(balance);
+                    InputHandler();
+                    break;
+                case 2:
+                    decimal newBalance = Withdraw(balance);
+                    if(newBalance > balance)
+                    {
+                        Console.WriteLine($"Insufficient funds for this transaction.");
+                    }
+                    else
+                    {
+                        balance = newBalance;
+                        Console.WriteLine($"Your current balance is: {newBalance}");
+                    }
+                    InputHandler();
+                    break;
+                case 3:
+                    balance = Deposit(balance);
+                    Console.WriteLine($"Your current balance is: {balance}");
+                    InputHandler();
+                    break;
+                case 4:
+                    Console.WriteLine("Thank you for banking with Bank Fellows. Have a great day!");
+                    break;
+                default:
+                    InputHandler();
+                    break;
             }
         }
-
  
     }
 }
