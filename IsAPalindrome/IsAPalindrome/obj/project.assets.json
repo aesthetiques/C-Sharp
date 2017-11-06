@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\veslan\\.nuget\\packages\\": {},
+    "C:\\Users\\dark apochrypha\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
+      "projectUniqueName": "C:\\Users\\dark apochrypha\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
       "projectName": "IsAPalindrome",
-      "projectPath": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
-      "packagesPath": "C:\\Users\\veslan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\veslan\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\obj\\",
+      "projectPath": "C:\\Users\\dark apochrypha\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\IsAPalindrome.csproj",
+      "packagesPath": "C:\\Users\\dark apochrypha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dark apochrypha\\Source\\Repos\\C-Sharp\\IsAPalindrome\\IsAPalindrome\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\veslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dark apochrypha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

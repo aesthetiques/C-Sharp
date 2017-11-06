@@ -8,37 +8,30 @@ namespace checkDuplicates
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
+            ContainsDuplicates("hello");
         }
 
-        public int ContainsDuplicates(string str)
+        public static int ContainsDuplicates(string str)
         {
             var numDupes = 0;
-            char checkSubStr;
-            char[] stringArray = str.ToLower().ToCharArray();
-            LinkedList<char> charList = new LinkedList<char>();
+            char checkSubStr = ' ';
+            List<char> charList = new List<char>(str);
 
-            foreach (char letter in stringArray)
+            while (charList.Count > 0)
             {
-                charList.AddLast(letter);
-            }
-
-            int charListCount = charList.Count;
-
-            while (charListCount != 0)
-            {
-                checkSubStr = charList.First.Value;
-                charList.RemoveFirst();
+                checkSubStr = charList[0];
+                charList.RemoveAt(0);
                 if (charList.Contains(checkSubStr)) numDupes++;
                 while (charList.Contains(checkSubStr))
                 {
                     charList.Remove(checkSubStr);
                 }
-
             }
 
+            Console.WriteLine($"number of dupes: {numDupes}");
             return numDupes;
         }
+
     }
 
 }
