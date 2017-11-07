@@ -10,6 +10,7 @@ namespace HangMan
         static void Main(string[] args)
         {
             string path = @"./data/ChallengeWords.txt";
+            MainMenuHandler(path);
         }
 
         static void InitApp(string path)
@@ -40,6 +41,17 @@ namespace HangMan
             }
         }
 
+        static int MainMenuOptions()
+        {
+            Console.WriteLine("Choose an number that correlates to an option below, and hit enter.");
+            Console.WriteLine("1. Play");
+            Console.WriteLine("2. View Challenge Words");
+            Console.WriteLine("3. Add Challenge Word");
+            Console.WriteLine("4. Remove Challenge Word");
+            Console.WriteLine("5. Exit Game");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
         static string ChooseWord(string path)
         {
             using (StreamReader sr = File.OpenText(path))
@@ -52,7 +64,8 @@ namespace HangMan
         
         static List<string> GetList(string path)
         {
-            using(StreamReader sr = File.OpenText(path))
+            
+            using (StreamReader sr = File.OpenText(path))
             {
                 List<string> wordList = new List<String>(File.ReadAllLines(path));
 
@@ -64,10 +77,19 @@ namespace HangMan
             }
         }
 
-        static void AddWord(string path, string word)
+        static void AddWord(string path)
         {
             List<string> wordList = new List<string>(GetList(path));
-            wordList.Add(word);
+
+            Console.Clear();
+            Console.WriteLine("Current word list");
+
+            foreach(string word in wordList)
+            {
+                Console.WriteLine(word);
+            }
+
+            wordList.Add(Console.ReadLine());
 
             if (File.Exists(path))
             {
@@ -81,15 +103,24 @@ namespace HangMan
                         byte[] newLine = Encoding.ASCII.GetBytes(Environment.NewLine);
                         fs.Write(newLine, 0, newLine.Length);
                     }
-                    Console.WriteLine($"Successfully added {word} to your word list.");
+                    Console.WriteLine($"Successfully added a word to your word list.");
                 }
             }
         }
 
-        static void RemoveWord(string path, string word)
+        static void RemoveWord(string path)
         {
             List<string> wordList = new List<string>(GetList(path));
-            wordList.RemoveAt(wordList.IndexOf(word));
+
+            Console.Clear();
+            Console.WriteLine("Current list:");
+
+            foreach(string word in wordList)
+            {
+                Console.WriteLine(word);
+            }
+
+            wordList.RemoveAt(wordList.IndexOf(Console.ReadLine()));
 
             if (File.Exists(path))
             {
@@ -103,13 +134,72 @@ namespace HangMan
                         byte[] newLine = Encoding.ASCII.GetBytes(Environment.NewLine);
                         fs.Write(newLine, 0, newLine.Length);
                     }
-                    Console.WriteLine($"Successfully removed {word} from your word list.");
+
+                    Console.WriteLine($"Successfully removed a word from your list; New List:");
+
+                    foreach (string word in wordList)
+                    {
+                        Console.WriteLine(word);
+                    }
+                    Console.WriteLine("");
                 }
             }
         }
 
 
+        static void MainMenuHandler(string path)
+        {
+            InitApp(path);
+            int chosenOption = MainMenuOptions();
+
+            switch (chosenOption)
+            {
+                case 1:
+                    GameHandler(path);
+                    break;
+                case 2:
+                    GetList(path);
+                    MainMenuHandler(path);
+                    break;
+                case 3:
+                    AddWord(path);
+                    MainMenuHandler(path);
+                    break;
+                case 4:
+                    RemoveWord(path);
+                    MainMenuHandler(path);
+                    break;
+                case 5:
+                    Console.WriteLine("Thanks for playing!!");
+                    break;
+                default:
+                    MainMenuHandler(path);
+                    break;
+            }
+
+        }
+
+        static void GameHandler(string path)
+        {
+            string chosenWord = ChooseWord(path);
+            string correctGuess = "";
+            string incorrectGuess = "";
+            int totalGuesses = 0;
+
+            List<char> guessList = new List<char>(chosenWord.ToCharArray());
+            List<char> correctGuessList = new List<char>();
+            List<char> totalGuessList = new List<char>();
+
+            while(true)
+            {
+                if(chosenWord == correctGuess)
+                {
+                    Console.WriteLine($"You have successfully guessed {correctGuess}! See you next time!");
+                }
 
 
+            }
+
+        }
     }
 }
