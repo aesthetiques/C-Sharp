@@ -182,19 +182,27 @@ namespace HangMan
         static void GameHandler(string path)
         {
             string chosenWord = ChooseWord(path);
-            string correctGuess = "";
+            string currentGuess = "";
             string incorrectGuess = "";
             int totalGuesses = 0;
 
             List<char> guessList = new List<char>(chosenWord.ToCharArray());
-            List<char> correctGuessList = new List<char>();
-            List<char> totalGuessList = new List<char>();
+            List<char> correctGuessList = new List<char>(chosenWord.Length);
+            List<char> totalGuessList = new List<char>(chosenWord.Length) { '_' };
 
             while(true)
             {
-                if(chosenWord == correctGuess)
+                if(guessList == correctGuessList)
                 {
-                    Console.WriteLine($"You have successfully guessed {correctGuess}! See you next time!");
+                    Console.WriteLine($"You have successfully guessed {chosenWord}! See you next time!");
+                }
+                
+                for(int i = 0; i < guessList.Count; i++)
+                {
+                    if(totalGuessList[i] == guessList[i])
+                    {
+
+                    }
                 }
 
 
