@@ -43,6 +43,7 @@ namespace HangMan
 
         static int MainMenuOptions()
         {
+            //Console.Clear();
             Console.WriteLine("Choose an number that correlates to an option below, and hit enter.");
             Console.WriteLine("1. Play");
             Console.WriteLine("2. View Challenge Words");
@@ -155,7 +156,9 @@ namespace HangMan
             switch (chosenOption)
             {
                 case 1:
-                    GameHandler(path);
+                    string chosenWord = GameHandler(path);
+                    Console.WriteLine($"Congratulations! You guessed {chosenWord}!");
+                    MainMenuHandler(path);
                     break;
                 case 2:
                     GetList(path);
@@ -179,67 +182,89 @@ namespace HangMan
 
         }
 
-        static void GameHandler(string path)
+        static string GameHandler(string path)
         {
+            string incorrectGuesses = "";
             string chosenWord = ChooseWord(path);
-
-            Console.WriteLine("Enter a character or word as a guess!");
-            string guess = Console.ReadLine();
-            string incorrectGuess = "";
-            int totalGuesses = 0;
-            bool hasWon = false;
-
-            char[] chosenList = chosenWord.ToCharArray();
             char[] correctGuess = new char[chosenWord.Length];
-            char[] currentGuess = new char[1] { Convert.ToChar(guess) };
-            List<char> failedGuesses = new List<char>();
-
             for(int c = 0; c < correctGuess.Length; c++)
             {
                 correctGuess[c] = '_';
             }
 
+            Console.Clear();
             Console.WriteLine(correctGuess);
+            Console.WriteLine($"Your failed guesses: {incorrectGuesses}");
+            Console.WriteLine("Enter a character or word as a guess!");
 
-            //Array.Exists<char>(correctGuess, x => x == '_')
+            string guess = Console.ReadLine();
+            char[] chosenList = chosenWord.ToCharArray();
+            char[] currentGuess = guess.Length == 1 ? new char[1] { Convert.ToChar(guess) } : guess.ToCharArray();
+
             int totalCorrectGuesses = 0;
 
             while (totalCorrectGuesses < chosenWord.Length)
             {
+
                 bool wasCorrect = false;
-                for(int i = 0; i < chosenList.Length; i++)
+
+                if (currentGuess.Length == 1)
                 {
-                    if(currentGuess[0] == chosenList[i])
+                    for(int i = 0; i < chosenList.Length; i++)
                     {
-                        correctGuess[i] = chosenList[i];
-                        wasCorrect = true;
-                        totalCorrectGuesses++;
+                        if(currentGuess[0] == chosenList[i])
+                        {
+                            correctGuess[i] = chosenList[i];
+                            wasCorrect = true;
+                            totalCorrectGuesses++;
+                        }
+                        /*else if(correctGuess[i] != chosenList[i] && !Char.IsLetter(correctGuess[i]))
+                        {
+                            correctGuess[i] = '_';
+                            Console.WriteLine(correctGuess);
+                        }*/
                     }
-                    else if(correctGuess[i] != chosenList[i] && !Char.IsLetter(correctGuess[i]))
+                }
+                else if(currentGuess.Length > 1 && (chosenWord.Contains(guess)) && !(incorrectGuesses.Contains(guess)))
+                {
+                    for(int g = 0; g < currentGuess.Length; g++)
                     {
-                        correctGuess[i] = '_';
-                        Console.WriteLine(correctGuess);
+                        for(int i = 0; i < chosenList.Length; i++)
+                        {
+                            if (currentGuess[g] == chosenList[i])
+                            {
+                                correctGuess[i] = chosenList[i];
+                                wasCorrect = true;
+                                totalCorrectGuesses++;
+                            }
+                        }
+
                     }
-                    Console.WriteLine(correctGuess);
                 }
 
-                if (!wasCorrect)
+                Console.Clear();
+                Console.WriteLine(correctGuess);
+
+                if (!wasCorrect && totalCorrectGuesses < chosenWord.Length)
                 {
-                    failedGuesses.Add(currentGuess[0]);
-                    Console.WriteLine($"Your failed guesses: {failedGuesses}");
+                    incorrectGuesses += $"{currentGuess[0]} ";
                 }
 
-                if(totalCorrectGuesses != chosenWord.Length)
+                Console.WriteLine($"Your failed guesses: {incorrectGuesses}");
+                Console.WriteLine("Enter a character or word as a guess!");
+
+                if (totalCorrectGuesses != chosenWord.Length)
                 {
-                    currentGuess = Console.ReadLine().ToCharArray();
+                    guess = Console.ReadLine();
+                    currentGuess = guess.Length == 1 ? new char[1] { Convert.ToChar(guess) } : guess.ToCharArray();
                 }
-                else
+                /*else
                 {
                     Console.WriteLine($"Congratulations! You guessed {chosenWord}");
-                    return;
-                }
+                }*/
             }
 
+            return chosenWord;
         }
     }
 }
