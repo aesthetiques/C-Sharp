@@ -43,13 +43,23 @@ namespace HangMan
 
         static int MainMenuOptions()
         {
-            //Console.Clear();
             Console.WriteLine("Choose an number that correlates to an option below, and hit enter.");
             Console.WriteLine("1. Play");
             Console.WriteLine("2. View Challenge Words");
             Console.WriteLine("3. Add Challenge Word");
             Console.WriteLine("4. Remove Challenge Word");
             Console.WriteLine("5. Exit Game");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            return choice;
+        }
+
+        static int PlayAgain()
+        {
+            Console.WriteLine("Choose an option that correlates a listed number.");
+            Console.WriteLine("1. Play again");
+            Console.WriteLine("2. Return to main menu");
+            Console.WriteLine("3. Exit Game");
             return Convert.ToInt32(Console.ReadLine());
         }
 
@@ -157,8 +167,27 @@ namespace HangMan
             {
                 case 1:
                     string chosenWord = GameHandler(path);
-                    Console.WriteLine($"Congratulations! You guessed {chosenWord}!");
-                    MainMenuHandler(path);
+                    Console.Clear();
+                    Console.WriteLine($"Congratulations! You guessed {chosenWord}! Play Again?");
+                    int continueOption = PlayAgain();
+                    switch (continueOption)
+                    {
+                        case 1:
+                            Console.Clear();
+                            GameHandler(path);
+                            break;
+                        case 2:
+                            Console.Clear();
+                            MainMenuHandler(path);
+                            break;
+                        case 3:
+                            Console.WriteLine("Thanks for playing!!");
+                            break;
+                        default:
+                            Console.Clear();
+                            MainMenuHandler(path);
+                            break;
+                    }
                     break;
                 case 2:
                     GetList(path);
