@@ -247,11 +247,6 @@ namespace HangMan
                             wasCorrect = true;
                             totalCorrectGuesses++;
                         }
-                        /*else if(correctGuess[i] != chosenList[i] && !Char.IsLetter(correctGuess[i]))
-                        {
-                            correctGuess[i] = '_';
-                            Console.WriteLine(correctGuess);
-                        }*/
                     }
                 }
                 else if(currentGuess.Length > 1 && (chosenWord.Contains(guess)) && !(incorrectGuesses.Contains(guess)))
